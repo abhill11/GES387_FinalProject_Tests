@@ -1,4 +1,4 @@
-var IL_Tribes = {
+var Tribes = {
 "type": "FeatureCollection",
 "name": "Il_Tribes",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
