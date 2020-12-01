@@ -57,10 +57,16 @@
               zoom: 7
           });
 // basemap
-        var antique = L.tileLayer('https://cartocdn_{s}.global.ssl.fastly.net/base-antique/{z}/{x}/{y}.png', {
-           attribution: 'Map tiles by Carto, under CC BY 3.0. Data by OpenStreetMap, under ODbL.',
-           maxZoom: 11,
-           minZoom: 3
+        // var antique = L.tileLayer('https://cartocdn_{s}.global.ssl.fastly.net/base-antique/{z}/{x}/{y}.png', {
+        //    attribution: 'Map tiles by Carto, under CC BY 3.0. Data by OpenStreetMap, under ODbL.',
+        //    maxZoom: 11,
+        //    minZoom: 3
+        //  }).addTo(map);
+
+         var watercolor = L.tileLayer('http://tile.stamen.com/watercolor/{z}/{x}/{y}.png', {
+             attribution: 'Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under ODbL.',
+             maxZoom: 11,
+             minZoom: 3
          }).addTo(map);
 
 
@@ -191,7 +197,7 @@
                     weight: 2,
                     opacity: 1,
                     color: 'darkgray',
-                    fillOpacity: .5,
+                    fillOpacity: .4,
                   };
                }
 
@@ -354,7 +360,8 @@ IL_Tribes = L.geoJson(IL_Tribes,{
 
               var basemaps = {
               // "Terrain Raster": terrain2,
-              // "Antique Canvas": antique
+              // "Antique Canvas": antique,
+              // "Watercolor Canvas": watercolor,
               "<i>Acer negundo - Boxelder</i>": aceneg,
               "<i>Acer saccharinum - Silver Maple</i>": acesai,
               "<i>Asclepias syriaca - Common Milkweed</i>": ascsyr,
