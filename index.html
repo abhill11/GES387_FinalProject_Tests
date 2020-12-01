@@ -23,7 +23,7 @@
         </style>
 
         <script type="text/javascript" src="Species_by_County.js"></script>
-        <script type="text/javascript" src="IL_Tribes.js"></script>
+        <script type="text/javascript" src="Tribes.js"></script>
 
         <style>
           /* Optional: adjust the values below to change the appearance of the legend */
@@ -191,7 +191,7 @@
                                      '#e4fcd7';
             }
 
-            function style_IL_Tribes(feature){
+            function style_Tribes(feature){
                 return {
                     fillColor: TribeColors(feature.properties.ID),
                     weight: 2,
@@ -201,7 +201,7 @@
                   };
                }
 
-               // function style_IL_Tribes(feature){
+               // function style_Tribes(feature){
                //     return {
                //         color: TribeColors(feature.properties.ID),
                //         weight: 4,
@@ -338,8 +338,8 @@
         }).addTo(map);
 
 
-IL_Tribes = L.geoJson(IL_Tribes,{
-    style:style_IL_Tribes,
+Tribes = L.geoJson(Tribes,{
+    style:style_Tribes,
     // onEachFeature: onEachFeature
   }).bindTooltip(function (layer){
     return layer.feature.properties.Name
@@ -376,7 +376,7 @@ IL_Tribes = L.geoJson(IL_Tribes,{
              };
 
              var overlays = {
-             "Tribe territories": IL_Tribes
+             "Tribe territories": Tribes
 
              };
 
